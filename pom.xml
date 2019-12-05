@@ -10,10 +10,11 @@
 	<artifactId>springboot-minikube-fabric8</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>springboot-minikube-fabric8</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Demo project for Spring Boot with minikube and fabric8</description>
 
 	<properties>
 		<java.version>1.8</java.version>
+		<fabric8.enricher.fmp-service.type>NodePort</fabric8.enricher.fmp-service.type>
 	</properties>
 
 	<dependencies>
@@ -28,6 +29,10 @@
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 			<exclusions>
@@ -39,28 +44,32 @@
 		</dependency>
 	</dependencies>
 
+
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludeDevtools>false</excludeDevtools>
+				</configuration>
 			</plugin>
-      <plugin>
-        <groupId>io.fabric8</groupId>
-        <artifactId>fabric8-maven-plugin</artifactId>
-        <version>3.1.49</version>
-        <executions>
-          <execution>
-            <id>fmp</id>
-            <goals>
-              <goal>resource</goal>
-              <goal>helm</goal>
-              <goal>build</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
+			<plugin>
+				<groupId>io.fabric8</groupId>
+				<artifactId>fabric8-maven-plugin</artifactId>
+				<version>4.3.1</version>
+				<!--<executions>:q!
+
+					<execution>:
+						<id>fabric8</id>
+						<goals>
+							<goal>resource</goal>
+							<goal>build</goal>
+							<goal>helm</goal>
+						</goals>
+					</execution>
+				</executions>-->
+			</plugin>
 		</plugins>
 	</build>
-
 </project>
