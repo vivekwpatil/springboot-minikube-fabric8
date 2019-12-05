@@ -17,7 +17,8 @@ public class HelloController {
 
         HashMap m= new HashMap();
         m.put("2", "Welcome to minikube demo in chapter meeting");
-        m.put("message", "how are you " + name  + "?");
+        m.put("3","It is cool");
+
         return m;
     }
 }
