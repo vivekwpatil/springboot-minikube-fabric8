@@ -16,9 +16,7 @@ public class HelloController {
     public Map<String,String>  hello(@PathVariable String name) {
 
         HashMap m= new HashMap();
-        m.put("2", "Welcome to minikube demo in chapter meeting");
-        m.put("3","It is cool");
-
+        m.put("1", "Welcome to minikube demo " + name);
         return m;
     }
 }

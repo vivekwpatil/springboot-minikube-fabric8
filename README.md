@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/vivekwpatil/springboot-minikube-fabric8.svg?branch=master)](https://travis-ci.org/vivekwpatil/springboot-minikube-fabric8)
 
 ### First install minikube locally in windows10
-If you are using chocolatey. Install minikube with following comand
+If you are using chocolatey. Install minikube with following command
 ```
 choco install docker-desktop
 choco install minikube
@@ -36,12 +36,9 @@ minikube ip
 kubectl get svc
 CLUSTER= $(minikube ip)
 curl $CLUSTER:31764/api/hello/Vivek
-
 ```
-
-
-```
-```
+###Reference:
+https://github.com/fabric8io/fabric8-maven-plugin
 
 
 
