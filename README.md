@@ -1,13 +1,26 @@
 # Spring Boot + minikube + fabric8
 [![Build Status](https://travis-ci.org/vivekwpatil/springboot-minikube-fabric8.svg?branch=master)](https://travis-ci.org/vivekwpatil/springboot-minikube-fabric8)
 
-## First install minikube locally in windows10
+## Install minikube locally
+
+https://kubernetes.io/es/docs/tasks/tools/install-minikube/
+
+### Windows10
 If you are using chocolatey. Install minikube with following command
 ```
 choco install docker-desktop
 choco install minikube
 minikube start
 ```
+
+### OSX
+```
+brew install minikube
+minikube start
+```
+
+## Kubernates tutorials
+https://kubernetes.io/es/docs/tutorials/kubernetes-basics/create-cluster/cluster-interactive/
 
 ##How  to create docker image of the application
 
