@@ -22,6 +22,11 @@ minikube start
 ## Kubernates tutorials
 https://kubernetes.io/es/docs/tutorials/kubernetes-basics/create-cluster/cluster-interactive/
 
+## Store  custom built docker images within Minikube’s virtual environment 
+```
+eval $(minikube docker-env)
+```
+
 ##How  to create docker image of the application
 
 ```
