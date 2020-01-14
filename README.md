@@ -50,6 +50,12 @@ kubectl get svc
 CLUSTER= $(minikube ip)
 curl $CLUSTER:31764/api/hello/Vivek
 ```
+##Trouble shooting
+IF you see ImagePullBackOff or ErrImagePull    error while performing kubectl get pods. you need to store custom built docker images within Minikube’s virtual environment 
+```
+eval $(minikube docker-env)
+```
+
 ##Reference:
 - https://github.com/fabric8io/fabric8-maven-plugin
 
